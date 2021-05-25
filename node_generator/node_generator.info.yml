@@ -1,0 +1,4 @@
+name: Node Generator
+type: module
+description: Programatically Generates Multiple Nodes 
+core: '8.x'

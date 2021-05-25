@@ -1,0 +1,10 @@
+view node_generator:
+  title: "View node_generator"
+  description: "View and submit the forms"
+access node_generator report:
+  title: "Access node_generator"
+  description: "View the repotr of node_generator forms"
+administer node_generator:
+  title: "Administer node_generator"
+  description: "access the node_generator forms pqage"
+  restrict access: true

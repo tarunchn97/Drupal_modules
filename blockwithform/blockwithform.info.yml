@@ -1,0 +1,4 @@
+name: Block with Form
+type: module
+core: '8.x'
+description: 'custom block for adding form on the sidebar of a page'

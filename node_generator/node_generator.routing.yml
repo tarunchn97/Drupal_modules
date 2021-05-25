@@ -1,0 +1,7 @@
+drupal_form.node_generator_form:
+  path: 'generate-nodes'
+  defaults:
+    _form: '\Drupal\node_generator\Form\NodeGeneratorForm'
+    _title: 'Drupal Node Generator'
+  requirements:
+    _permission: 'view node_generator'

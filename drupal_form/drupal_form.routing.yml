@@ -1,0 +1,7 @@
+drupal_form.drupal_form:
+  path: 'myforms'
+  defaults:
+    _form: '\Drupal\drupal_form\Form\DrupalForms'
+    _title: 'Drupal Simple Form'
+  requirements:
+    _permission: 'access content'

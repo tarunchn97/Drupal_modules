@@ -1,0 +1,4 @@
+name: Drupal Form
+type: module
+description: Dupal forms with four fields
+core: '8.x'

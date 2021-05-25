@@ -1,0 +1,69 @@
+<?php
+/**
+ * Implements hook_schema().
+ *
+ */
+function blockwithform_schema() {
+  $schema['blockwithform'] = array(
+    'description' => 'Stores name, timestamp, nid and uid for an form',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier for the record.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'uid' => array(
+        'description' => 'The {users}.uid that added this form.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'nid' => array(
+        'description' => 'The {node} .nid for this form.',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => FALSE,
+        'default' => 0,
+      ),
+      'name' => array(
+        'description' => 'User\'s name',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+      'response' => array(
+        'description' => 'User\'s response',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+      'created' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Timestamp for when form was created.',
+      ),
+    ),
+    'primary key' => array('id'),
+    'indexes' => array(
+      'node' => array('nid'),
+      'node_user' => array('nid', 'uid'),
+    ),
+  );
+ $schema['blockwithform_enabled'] = array(
+    'description' => 'Tracks whether blockwithform is enabled for a node.',
+    'fields' => array(
+      'nid' => array(
+        'description' => 'The {node}.nid that has blockwithform enabled.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'primary key' => array('nid'),
+  );
+  return $schema;
+}
