@@ -1,0 +1,4 @@
+name: Node With Json
+type: module
+description: "Return json data on the given Node"
+core: '8.x'

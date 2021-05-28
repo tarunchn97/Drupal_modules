@@ -1,0 +1,18 @@
+nodewithjson.node_json_data:
+  path: '/admin/config/nodewithjson/getapikey'
+  defaults:
+    _form: '\Drupal\nodewithjson\Form\NodeWithJson'
+    _title: 'Api key Submit Form :'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: true
+
+nodewithjson.external_api_key_controller_ShowKey:
+  path: '/data/{apikey}/{nodeid}'
+  defaults:
+    _controller: '\Drupal\nodewithjson\Controller\ApiController::ShowKey'
+    _title: 'External API Key'
+  methods: [GET]
+  requirements:
+    _permission: 'access content'
